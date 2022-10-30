@@ -21,6 +21,7 @@ class Shop extends CI_Controller {
 	public function index()
 	{
 		$data['content']	= "contents/shop/v_shop_page";
+		$data['menu']		= "shop";
 		$this->load->view('layouts/v_layout', $data);
 	}
 }

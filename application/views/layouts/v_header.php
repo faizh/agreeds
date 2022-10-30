@@ -50,7 +50,7 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="index.html">
+							<a href="<?= base_url() ?>">
 								<img src="<?= base_url() ?>assets/img/logo.png" alt="">
 							</a>
 						</div>
@@ -59,10 +59,10 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="current-list-item"><a href="<?= base_url() ?>">Home</a></li>
-								<li><a href="<?= base_url() ?>index.php/shop">Shop</a></li>
-								<li><a href="<?= base_url() ?>index.php/news">News</a></li>
-								<li><a href="<?= base_url() ?>index.php/about">About Us</a></li>
+								<li class="<?= ($menu == 'home') ? 'current-list-item' : '' ?>"><a href="<?= base_url() ?>">Home</a></li>
+								<li class="<?= ($menu == 'shop') ? 'current-list-item' : '' ?>"><a href="<?= base_url() ?>index.php/shop">Shop</a></li>
+								<li class="<?= ($menu == 'news') ? 'current-list-item' : '' ?>"><a href="<?= base_url() ?>index.php/news">News</a></li>
+								<li class="<?= ($menu == 'about') ? 'current-list-item' : '' ?>"><a href="<?= base_url() ?>index.php/about">About Us</a></li>
 								<li>
 									<div class="header-icons">
 										<a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
