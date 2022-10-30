@@ -24,8 +24,23 @@ class Auth extends CI_Controller {
 		$this->load->view('contents/auth/v_login');
 	}
 
+	public function act_login()
+	{
+		redirect('');
+	}
+
 	public function signup()
 	{
 		$this->load->view('contents/auth/v_sign_up');
+	}
+
+	public function act_signup()
+	{
+		redirect('auth/login');
+	}
+
+	public function logout()
+	{
+		redirect('auth/login');
 	}
 }

@@ -85,7 +85,7 @@
 							<div class="login-text">
 								<h1>Login</h1>
 								<div class="form-login">
-									<form>
+									<form action="<?= base_url() ?>index.php/auth/act_login">
 										<input type="email" name="email" class="form-control" placeholder="Your Email">
 										<input type="password" name="password" class="form-control" placeholder="Your Password">
 

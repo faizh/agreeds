@@ -112,7 +112,7 @@
 
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<a href="news.html" class="boxed-btn">More Products</a>
+					<a href="<?= base_url() ?>index.php/shop" class="boxed-btn">More Products</a>
 				</div>
 			</div>
 		</div>

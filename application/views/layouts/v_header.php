@@ -70,7 +70,7 @@
 										<a class="mobile-hide" href="#"><i class="fas fa-user"></i></a>
 									<ul class="sub-menu">
 										<li><a href="#">Faiz Hermawan</a></li>
-										<li><a href="#"><button class="btn btn-sm btn-danger">Logout</button></a></li>
+										<li><a href="<?= base_url() ?>index.php/auth/logout"><button class="btn boxed-btn btn-sm btn-danger">Logout</button></a></li>
 									</ul>
 									</div>
 								</li>

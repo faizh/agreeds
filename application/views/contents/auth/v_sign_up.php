@@ -85,7 +85,7 @@
 							<div class="login-text">
 								<h1>Signup</h1>
 								<div class="form-login">
-									<form>
+									<form action="<?= base_url() ?>index.php/auth/act_signup">
 										<input type="text" name="fullname" class="form-control" placeholder="Enter your Fullname">
 										<input type="email" name="email" class="form-control" placeholder="Enter your Email">
 										<input type="password" name="password" class="form-control" placeholder="Enter your Password">
