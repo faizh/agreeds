@@ -83,7 +83,7 @@
 					<div class="row">
 						<div class="col-12 text-center">
 							<div class="login-text">
-								<h1>Login</h1>
+								<h1>Log In</h1>
 								<div class="form-login">
 									<form action="<?= base_url() ?>index.php/auth/act_login">
 										<input type="email" name="email" class="form-control" placeholder="Your Email">
