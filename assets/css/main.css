@@ -1,4 +1,11 @@
-/*Template Name: Fruitkha - Responsive Bootstrap4 Shop TemplateTemplate URI: Description: Bootstrap template for fruits or any other kind of shopAuthor: Imran HossainAuthor URI: https://imransdesign.com/Version: 1.0*/
+/*
+Template Name: Fruitkha - Responsive Bootstrap4 Shop Template
+Template URI: 
+Description: Bootstrap template for fruits or any other kind of shop
+Author: Imran Hossain
+Author URI: https://imransdesign.com/
+Version: 1.0
+*/
 /* -----------------------------------------------------------------------------
 
 # Base - Genral & Typography
@@ -418,6 +425,23 @@ a.bordered-btn {
   padding: 7px 20px;
 }
 
+button.boxed-btn {
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  background-color: #F28123;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+button.bordered-btn {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  color: #fff;
+  border: 2px solid #F28123;
+  padding: 7px 20px;
+}
+
 a.read-more-btn {
   display: inline-block;
   margin-top: 15px;
@@ -433,6 +457,10 @@ a.read-more-btn:hover {
 }
 
 a.boxed-btn, a.bordered-btn, a.cart-btn {
+  border-radius: 50px;
+}
+
+button.boxed-btn, button.bordered-btn, button.cart-btn {
   border-radius: 50px;
 }
 
@@ -1017,6 +1045,28 @@ a.bordered-btn {
 }
 
 a.bordered-btn:hover {
+  background-color: #F28123;
+  color: #fff;
+}
+
+button.boxed-btn {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button.boxed-btn:hover {
+  background-color: #051922;
+  color: #F28123;
+}
+
+button.bordered-btn {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+button.bordered-btn:hover {
   background-color: #F28123;
   color: #fff;
 }
@@ -2747,4 +2797,46 @@ table.order-details tbody td {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
+}
+
+
+
+/* -----------------------------------------------------------------------------
+
+# Login Page Syles
+
+----------------------------------------------------------------------------- */
+
+.login-section {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.login-section p {
+  color: white;
+}
+
+.login-section a {
+  color: white;
+}
+
+.login-section a:hover {
+  color: #F28123;
+  text-decoration: none;
+}
+
+.login-text h1 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.form-login {
+  margin-top: 20px;
+}
+
+.form-login input {
+  margin-top: 10px;
+  height: 50px;
+  border-radius: 15px;
 }
