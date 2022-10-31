@@ -61,7 +61,7 @@
     <!--PreLoader Ends-->
 
 	<!-- hero area -->
-	<div class="hero-area hero-bg">
+	<div class="hero-area homepage-bg-3">
 		<div class="row">
 			<div class="col-8">
 				<div class="container">
@@ -85,7 +85,7 @@
 							<div class="login-text">
 								<h1>Log In</h1>
 								<div class="form-login">
-									<form action="<?= base_url() ?>index.php/auth/act_login">
+									<form action="<?= base_url() ?>index.php/auth/act_login" method="post">
 										<input type="email" name="email" class="form-control" placeholder="Your Email">
 										<input type="password" name="password" class="form-control" placeholder="Your Password">
 

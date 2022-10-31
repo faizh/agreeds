@@ -69,8 +69,23 @@
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 										<a class="mobile-hide" href="#"><i class="fas fa-user"></i></a>
 									<ul class="sub-menu">
-										<li><a href="#">Faiz Hermawan</a></li>
-										<li><a href="<?= base_url() ?>index.php/auth/logout"><button class="btn boxed-btn btn-sm btn-danger">Logout</button></a></li>
+										<li><a href="#">
+											<?php 
+											if ($this->session->has_userdata('user_id')) {
+												echo $this->session->userdata('username');
+											}else{
+												echo "Not Logged In";
+											}
+											?>
+										</a></li>
+										<li>
+											<?php 
+											if ($this->session->has_userdata('user_id')) { ?>
+												<a href="<?= base_url() ?>index.php/auth/logout"><button class="btn boxed-btn btn-sm btn-danger">Logout</button></a>
+											<?php } else { ?>
+												<a href="<?= base_url() ?>index.php/auth/login"><button class="btn boxed-btn btn-sm btn-danger">Login</button></a>
+											<?php } ?>
+										</li>
 									</ul>
 									</div>
 								</li>

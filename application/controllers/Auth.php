@@ -26,6 +26,31 @@ class Auth extends CI_Controller {
 
 	public function act_login()
 	{
+		$this->load->model('M_users');
+
+		$email 		= trim($this->input->post('email'));
+		$password 	= trim($this->input->post('password'));
+
+		$user 		= $this->M_users->getByEmail($email);
+
+		if (empty($user->id)) {
+			redirect('auth/signup');
+			exit();
+		}
+
+		if (!password_verify($password, $user->password)) {
+			redirect('auth/login');
+			exit();	
+		}
+
+		$attributes = array(
+			'user_id'	=> $user->id,
+			'username'	=> $user->username,
+			'role'		=> $user->role
+		);
+
+		$this->session->set_userdata($attributes);
+
 		redirect('');
 	}
 
@@ -36,11 +61,37 @@ class Auth extends CI_Controller {
 
 	public function act_signup()
 	{
+		$this->load->model('M_users');
+
+		$username	= $this->input->post('username');
+		$fullname 	= $this->input->post('fullname');
+		$email 		= $this->input->post('email');
+		$password 	= password_hash($this->input->post('password'), PASSWORD_BCRYPT);
+		$role 		= 1; // role for users
+
+		if (!empty($this->M_users->getByEmail($email)->id)) {
+			redirect('auth/signup');
+			exit();
+		}
+
+		$attr = array(
+			'username'	=> trim($username),
+			'fullname'	=> trim($fullname),
+			'email'		=> trim($email),
+			'password'	=> trim($password),
+			'role' 		=> $role
+		);
+
+		if (!$this->M_users->store($attr)) {
+			redirect('auth/signup');
+		}
+
 		redirect('auth/login');
 	}
 
 	public function logout()
 	{
+		$this->session->sess_destroy();
 		redirect('auth/login');
 	}
 }
