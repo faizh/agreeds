@@ -20,6 +20,12 @@ class News extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model(array(
+			'M_posts'
+		));
+
+		$data['posts']		= $this->M_posts->getAllNews();
+		
 		$data['content']	= "contents/news/v_news";
 		$data['menu']		= "news";
 		$this->load->view('layouts/v_layout', $data);
