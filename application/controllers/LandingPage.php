@@ -20,6 +20,12 @@ class LandingPage extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->model(array(
+			'M_products'
+		));
+
+		$data['products']	= $this->M_products->getAllProductsLimited(3);
+
 		$data['content']	= "contents/v_landing_page";
 		$data['menu']		= "home";
 		$this->load->view('layouts/v_layout', $data);
