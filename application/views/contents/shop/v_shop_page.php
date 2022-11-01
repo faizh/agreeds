@@ -40,8 +40,8 @@
 							</div>
 							<h3><?= $product->name ?></h3>
 							<p class="product-price"><span>Per <?= $product->unit ?></span> Rp <?= number_format($product->price) ?></p>
+							
 							<form action="<?= base_url()?>index.php/shop/addCart" method="post">
-
 								<input type="hidden" name="product_id" value="<?= $product->id ?>">
 								<input type="hidden" name="qty" value="1">
 								<br />

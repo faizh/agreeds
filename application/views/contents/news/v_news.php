@@ -22,19 +22,20 @@
 				foreach ($posts as $post) { ?>
 					<div class="col-lg-4 col-md-6">
 						<div class="single-latest-news">
-							<a href="single-news.html"><div class="latest-news-bg" style="background-image : url('<?= base_url()?><?= $post->images ?>')"></div></a>
+							<a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>"><div class="latest-news-bg" style="background-image : url('<?= base_url()?><?= $post->images ?>')"></div></a>
 							<div class="news-text-box">
-								<h3><a href="single-news.html"><?= $post->title ?></a></h3>
+								<h3><a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>"><?= $post->title ?></a></h3>
 								<p class="blog-meta">
 									<span class="author"><i class="fas fa-user"></i> <?= $post->username ?></span>
 									<span class="date"><i class="fas fa-calendar"></i> 
-									<?php 
-										$created_date = strtotime($post->created_dtm);
-										echo date("Y M d H:i:s", $created_date);
-									?></span>
+										<?php 
+											$created_date = strtotime($post->created_dtm);
+											echo date("Y M d H:i:s", $created_date);
+										?>
+									</span>
 								</p>
 								<p class="excerpt"><?= $post->preview_content ?></p>
-								<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+								<a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
 							</div>
 						</div>
 					</div>

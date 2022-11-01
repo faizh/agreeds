@@ -25,8 +25,21 @@ class News extends CI_Controller {
 		));
 
 		$data['posts']		= $this->M_posts->getAllNews();
-		
+
 		$data['content']	= "contents/news/v_news";
+		$data['menu']		= "news";
+		$this->load->view('layouts/v_layout', $data);
+	}
+
+	public function news_detail($id)
+	{
+		$this->load->model(array(
+			'M_posts'
+		));
+
+		$data['post'] 		= $this->M_posts->getNewsById($id);
+
+		$data['content']	= "contents/news/v_news_detail";
 		$data['menu']		= "news";
 		$this->load->view('layouts/v_layout', $data);
 	}
