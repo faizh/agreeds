@@ -7,6 +7,11 @@
 					<div class="breadcrumb-text">
 						<p>Organic Information</p>
 						<h1>News Article</h1>
+						<br />
+						<?php 
+						if ($this->session->has_userdata('user_id')) { ?>
+							<a href="<?= base_url()?>index.php/news/create_post" class="bordered-btn">Share Post</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>

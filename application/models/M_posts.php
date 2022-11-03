@@ -8,6 +8,18 @@ class M_posts extends CI_Model {
     public $images;
     public $created_by;
 
+    function store($attributes)
+    {
+        $this->title        = $attributes['title'];
+        $this->content      = $attributes['content'];
+        $this->images       = $attributes['images'];
+        $this->created_by   = $attributes['user_id'];
+
+        $this->db->insert($this->tableName, $this);
+
+        return $this->db->affected_rows() > 0;
+    }
+
     public function getNewsById($id)
     {
         $this->db->select('p.*');
