@@ -1,3 +1,15 @@
+#####################################
+************** Agreeds **************
+++++++ Your Agricultural Needs ++++++
+#####################################
+
+Access Here : 
+https://agreeds.000webhostapp.com
+
+Notes :
+- Need Login to access Shop and News Menu
+
+
 ###################
 What is CodeIgniter
 ###################
