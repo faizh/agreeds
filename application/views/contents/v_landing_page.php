@@ -200,48 +200,28 @@
 			</div>
 
 			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+				<?php
+				foreach ($posts as $post) { ?>
+					<div class="col-lg-4 col-md-6">
+						<div class="single-latest-news">
+							<a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>"><div class="latest-news-bg" style="background-image : url('<?= base_url()?><?= $post->images ?>')"></div></a>
+							<div class="news-text-box">
+								<h3><a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>"><?= $post->title ?></a></h3>
+								<p class="blog-meta">
+									<span class="author"><i class="fas fa-user"></i> <?= $post->username ?></span>
+									<span class="date"><i class="fas fa-calendar"></i> 
+										<?php 
+											$created_date = strtotime($post->created_dtm);
+											echo date("Y M d H:i:s", $created_date);
+										?>
+									</span>
+								</p>
+								<p class="excerpt"><?= $post->preview_content ?></p>
+								<a href="<?= base_url() ?>index.php/news/news_detail/<?= $post->id ?>" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Vivamus lacus enim, pulvinar vel nulla sed, scelerisque rhoncus nisi. Praesent vitae mattis nunc, egestas viverra eros.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
+				<?php } ?>
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center">
