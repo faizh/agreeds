@@ -19,7 +19,7 @@
 			<div class="row">
 				<div class="col-lg-7">
 					<div class="featured-text">
-						<h2 class="pb-3">Why <span class="orange-text">Fruitkha</span></h2>
+						<h2 class="pb-3">Why <span class="orange-text">Agreeds</span></h2>
 						<div class="row">
 							<div class="col-lg-6 col-md-6 mb-4 mb-md-5">
 								<div class="list-box d-flex">
@@ -27,41 +27,30 @@
 										<i class="fas fa-shipping-fast"></i>
 									</div>
 									<div class="content">
-										<h3>Home Delivery</h3>
-										<p>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+										<h3>Free Delivery</h3>
+										<p>Agreeds give you benefit of Free Delivery when your order is more than Rp <?= number_format(100000) ?></p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 mb-5 mb-md-5">
 								<div class="list-box d-flex">
 									<div class="list-icon">
-										<i class="fas fa-money-bill-alt"></i>
+										<i class="fas fa-phone-volume"></i>
 									</div>
 									<div class="content">
-										<h3>Best Price</h3>
-										<p>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+										<h3>24/7 Support</h3>
+										<p>Agreeds always try to get in touch with you in every single seconds</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 mb-5 mb-md-5">
 								<div class="list-box d-flex">
 									<div class="list-icon">
-										<i class="fas fa-briefcase"></i>
+										<i class="fas fa-sync"></i>
 									</div>
 									<div class="content">
-										<h3>Custom Box</h3>
-										<p>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6">
-								<div class="list-box d-flex">
-									<div class="list-icon">
-										<i class="fas fa-sync-alt"></i>
-									</div>
-									<div class="content">
-										<h3>Quick Refund</h3>
-										<p>sit voluptatem accusantium dolore mque laudantium, totam rem aperiam, eaque ipsa quae ab illo.</p>
+										<h3>News</h3>
+										<p>Get Latest News about Agricultural from other users accross the world</p>
 									</div>
 								</div>
 							</div>
@@ -74,13 +63,13 @@
 	<!-- end featured section -->
 
 	<!-- shop banner -->
-	<section class="shop-banner">
+	<!-- <section class="shop-banner">
     	<div class="container">
         	<h3>December sale is on! <br> with big <span class="orange-text">Discount...</span></h3>
             <div class="sale-percent"><span>Sale! <br> Upto</span>50% <span>off</span></div>
             <a href="shop.html" class="cart-btn btn-lg">Shop Now</a>
         </div>
-    </section>
+    </section> -->
 	<!-- end shop banner -->
 
 	<!-- team section -->
@@ -90,43 +79,28 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">
 						<h3>Our <span class="orange-text">Team</span></h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
+						<p>There are our spectacular people who develop Agreeds Application</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-4 col-md-6">
-					<div class="single-team-item">
-						<div class="team-bg team-bg-1"></div>
-						<h4>Jimmy Doe <span>Farmer</span></h4>
-						<ul class="social-link-team">
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
+					
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="single-team-item">
-						<div class="team-bg team-bg-2"></div>
-						<h4>Marry Doe <span>Farmer</span></h4>
+						<div class="team-bg team-bg-2" style="background-image: url('<?= base_url() ?>assets/img/team/faiz.jpg');"></div>
+						<h4>Faiz Hermawan <span>Developer</span></h4>
 						<ul class="social-link-team">
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://github.com/faizh" target="_blank"><i class="fab fa-github"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/faiz-hermawan" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/faiz.hermawan.77" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.instagram.com/faizhermawan_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-					<div class="single-team-item">
-						<div class="team-bg team-bg-3"></div>
-						<h4>Simon Joe <span>Farmer</span></h4>
-						<ul class="social-link-team">
-							<li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-							<li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
+					
 				</div>
 			</div>
 		</div>
