@@ -178,7 +178,7 @@
 						<h2>We are <span class="orange-text">Agreeds</span></h2>
 						<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-						<a href="about.html" class="boxed-btn mt-4">know more</a>
+						<a href="<?= base_url()?>index.php/about" class="boxed-btn mt-4">know more</a>
 					</div>
 				</div>
 			</div>
@@ -225,7 +225,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<a href="news.html" class="boxed-btn">More News</a>
+					<a href="<?= base_url()?>index.php/news" class="boxed-btn">More News</a>
 				</div>
 			</div>
 		</div>

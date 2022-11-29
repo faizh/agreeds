@@ -36,18 +36,22 @@
 								$total_product = 0;
 								foreach ($products as $product) { ?>
 									<tr class="table-body-row">
-										<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
+										<td class="product-remove"><a onclick="confirmDelete(<?= $product->cart_id ?>)"><i class="fa fa-trash"></i></a></td>
 										<td class="product-image"><img src="<?= base_url() ?><?= $product->images ?>" alt=""></td>
 										<td class="product-name"><?= $product->name ?></td>
-										<td class="product-price">Rp <?= number_format($product->price) ?></td>
-										<td class="product-quantity"><input type="number" placeholder="0" value="<?= $product->qty ?>"></td>
-										<td class="product-total">
+										<td class="product-price">
+											Rp <?= number_format($product->price) ?>
+											<input type="hidden" name="unit-price[]" value="
+											<?= $product->price ?>" id="unit-price-<?= $product->cart_id ?>">
+										</td>
+										<td class="product-quantity"><input type="number" placeholder="0" value="<?= $product->qty ?>" onchange="calculateTotalProduct(this)" cart_id="<?= $product->cart_id ?>"></td>
+										<td class="product-quantity">
 											<?php
 											$sub_total_product 	= $product->price * $product->qty;
 											$total_product 		+= $sub_total_product;
 
-											echo "Rp " . number_format($sub_total_product);
 											?>
+											<input type="number" placeholder="<?= $sub_total_product ?>" name="total_price-<?= $product->cart_id ?>" value="<?= $sub_total_product ?>" readOnly>	
 										</td>
 									</tr>	
 								<?php } $total_payment += $total_product ?>
@@ -88,7 +92,6 @@
 							</tbody>
 						</table>
 						<div class="cart-buttons">
-							<a href="cart.html" class="boxed-btn">Update Cart</a>
 							<a href="checkout.html" class="boxed-btn black">Check Out</a>
 						</div>
 					</div>
@@ -107,3 +110,19 @@
 		</div>
 	</div>
 	<!-- end cart -->
+
+
+	<script>
+		function confirmDelete(cart_id) {
+			alert('confirm delete cart id : ' +cart_id);
+		}
+
+		function calculateTotalProduct(qty) {
+			var new_qty 				= qty.value;
+			var cart_id 				= qty.cart_id;
+			var product_unit_price_id 	= "unit-price-"+cart_id;
+			var unit_price 				= document.getElementById(product_unit_price_id);
+
+			console.log(unit_price);
+		}
+	</script>

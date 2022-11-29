@@ -22,7 +22,7 @@ class M_carts extends CI_Model {
 
     public function getCartByUserId($user_id)
     {
-        $this->db->select('*');
+        $this->db->select('*, c.id as cart_id');
         $this->db->join('t_products t', 't.id = c.product_id');
         $this->db->where("c.is_in_cart", 'Y');
         $this->db->where("c.created_by", $user_id);
